@@ -236,7 +236,7 @@
     </div>
   </main>
 
-  <!-- Modal pour afficher l'image -->
+
   <div id="imageModal">
     <div id="imageModalContent">
       <img id="modalImage" src="" alt="Image du projet" />
@@ -245,7 +245,7 @@
   </div>
 
   <script>
-    // Ouvrir modal et afficher image
+
     document.querySelectorAll('.show-image-btn').forEach(button => {
       button.addEventListener('click', e => {
         e.preventDefault();
@@ -255,13 +255,13 @@
       });
     });
 
-    // Fermer modal
+  
     document.getElementById('closeModalBtn').addEventListener('click', () => {
       document.getElementById('imageModal').style.display = 'none';
       document.getElementById('modalImage').src = '';
     });
 
-    // Fermer modal si clic en dehors du contenu
+ 
     document.getElementById('imageModal').addEventListener('click', e => {
       if (e.target === e.currentTarget) {
         document.getElementById('imageModal').style.display = 'none';
