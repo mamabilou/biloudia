@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets - ClergerTech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg-color: #e1e5ea;
+      --text-color: #333;
+      --accent-color: #3a8d7c;
+      --section-bg: #fff;
+      --card-shadow: rgba(0,0,0,0.05);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    h1.brand {
+      margin: 10px 0 0;
+      color: var(--accent-color);
+      font-size: 2.2em;
+    }
+
+    .quote {
+      font-style: italic;
+      color: var(--accent-color);
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    nav {
+      border-top: 2px solid var(--accent-color);
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--accent-color);
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #2c6f63;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .projets-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project {
+      background-color: var(--section-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px var(--card-shadow);
+    }
+
+    .project h3 {
+      color: var(--accent-color);
+      margin-top: 0;
+    }
+
+    .project img {
+      max-width: 100%;
+      max-height: 250px;
+      display: block;
+      margin: 10px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .project img:hover {
+      transform: scale(1.05);
+    }
+
+    .show-image-btn {
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    /* Modal styles */
+    #imageModal {
+      display: none; /* hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #imageModalContent {
+      position: relative;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    #imageModalContent img {
+      max-width: 100%;
+      max-height: 80vh;
+      display: block;
+      border-radius: 10px;
+    }
+
+    #closeModalBtn {
+      margin-top: 10px;
+      background-color: #888;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 12px;">
+      <img src="static/laptop.jpg" alt="Logo ClergerTech" style="width: 45px; height: auto; border-radius: 6px;" />
+      <h1 style="margin: 0; color: #3a8d7c;">ClergerTech</h1>
+    </div>
+    <p class="quote">“Le code, c’est la poésie de la logique. À chaque ligne, je crée un monde, j’exprime une idée.”</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="projets.html" class="active">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <div class="projets-container">
+
+      <section class="project">
+        <h3>QuizMaster - Application de Quiz</h3>
+        <p>Application interactive à choix multiple avec note finale.</p>
+        <ul><li><strong>Technologies :</strong> HTML, CSS, JavaScript</li></ul>
+        <a href="static/quiz.png" target="_blank" class="show-image-btn" data-img-src="static/quiz.png">Voir l’image</a>
+      </section>
+
+      <section class="project">
+        <h3>Horloge JavaScript</h3>
+        <p>Horloge digitale en temps réel, affichage dynamique avec design épuré et facile à lire.</p>
+        <ul><li><strong>Technologies :</strong> HTML, CSS, JavaScript</li></ul>
+        <img src="static/horloge.png" alt="Horloge" />
+        <p>🔗 <a href="https://mamabilou.github.io/horloge/" target="_blank">Voir sur GitHub</a></p>
+      </section>
+
+      <section class="project">
+        <h3>Citation Inspirante</h3>
+        <p>Affiche chaque jour une citation motivante et inspirante pour encourager la réflexion positive.</p>
+        <ul><li><strong>Technologies :</strong> HTML, CSS, JavaScript</li></ul>
+        <img src="static/pensee.png" alt="Citation" />
+        <p>🔗 <a href="https://mamabilou.github.io/bilou/" target="_blank">Voir sur GitHub</a></p>
+      </section>
+
+      <section class="project">
+        <h3>Slider d'Images</h3>
+        <p>Carrousel JavaScript affichant des images et pensées inspirantes avec navigation manuelle et automatique.</p>
+        <ul><li><strong>Technologies :</strong> HTML, CSS, JavaScript</li></ul>
+        <img src="static/slider.png" alt="Slider" />
+        <p>🔗 <a href="https://mamabilou.github.io/slider/" target="_blank">Voir sur GitHub</a></p>
+      </section>
+
+      <section class="project">
+        <h3>Flyers Design pour Studio</h3>
+        <p>Création de flyers modernes pour divers événements, avec design attractif et professionnel.</p>
+        <ul><li><strong>Technologies :</strong> Photoshop, Illustrator, Canva</li></ul>
+        <a href="static/flyer.jpeg" target="_blank" class="show-image-btn" data-img-src="static/flyer.jpeg">Voir l’image</a>
+      </section>
+
+      <section class="project">
+        <h3>Système de Sécurité Arduino</h3>
+        <p>Dispositif de sécurité intelligent basé sur Arduino avec alarme, LED et capteur de mouvement, idéal pour la surveillance domestique.</p>
+        <ul><li><strong>Technologies :</strong> Arduino, capteurs PIR, buzzer, LED</li></ul>
+        <a href="static/arduino.png" target="_blank" class="show-image-btn" data-img-src="static/arduino.png">Voir l’image</a>
+      </section>
+
+      <section class="project">
+        <h3>Compteur Click +1</h3>
+        <p>Compteur simple qui augmente à chaque clic, parfait pour apprendre la manipulation DOM en JavaScript.</p>
+        <ul><li><strong>Technologies :</strong> HTML, CSS, JavaScript</li></ul>
+        <img src="static/compteur.png" alt="Compteur" />
+        <p>🔗 <a href="https://mamabilou.github.io/compteur/" target="_blank">Voir sur GitHub</a></p>
+      </section>
+
+      <section class="project">
+        <h3>ToDo Liste</h3>
+        <p>Gestionnaire de tâches simple avec ajout, suppression et marquage de tâches complétées.</p>
+        <ul><li><strong>Technologies :</strong> HTML, CSS, JavaScript</li></ul>
+        <img src="static/list.png" alt="ToDo" />
+        <p>🔗 <a href="https://mamabilou.github.io/list/" target="_blank">Voir sur GitHub</a></p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Modal pour afficher l'image -->
+  <div id="imageModal">
+    <div id="imageModalContent">
+      <img id="modalImage" src="" alt="Image du projet" />
+      <button id="closeModalBtn">← Retour</button>
+    </div>
+  </div>
+
+  <script>
+    // Ouvrir modal et afficher image
+    document.querySelectorAll('.show-image-btn').forEach(button => {
+      button.addEventListener('click', e => {
+        e.preventDefault();
+        const imgSrc = button.getAttribute('data-img-src');
+        document.getElementById('modalImage').src = imgSrc;
+        document.getElementById('imageModal').style.display = 'flex';
+      });
+    });
+
+    // Fermer modal
+    document.getElementById('closeModalBtn').addEventListener('click', () => {
+      document.getElementById('imageModal').style.display = 'none';
+      document.getElementById('modalImage').src = '';
+    });
+
+    // Fermer modal si clic en dehors du contenu
+    document.getElementById('imageModal').addEventListener('click', e => {
+      if (e.target === e.currentTarget) {
+        document.getElementById('imageModal').style.display = 'none';
+        document.getElementById('modalImage').src = '';
+      }
+    });
+  </script>
+</body>
+</html>

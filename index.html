@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClergerTech - Accueil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa; /* fond clair */
+      color: #333333; /* texte sombre mais doux */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #e1e4e8; /* gris clair */
+      border-bottom: 2px solid #3a8d7c; /* accent vert doux */
+      padding: 20px 0;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-family: 'Georgia', serif;
+      font-size: 2.5em;
+      margin: 0;
+      color: #3a8d7c;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #3a8d7c;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: #e1e4e8;
+      padding: 10px 0;
+      text-align: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #3a8d7c;
+      transition: color 0.3s ease;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #2c6f63;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      margin-top: 30px;
+      flex-grow: 1;
+    }
+
+    .hero .left, .hero .right {
+      flex: 1;
+      padding: 20px;
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+      border-radius: 8px;
+    }
+
+    .hero .left {
+      background-image: url("static/imj1.jpg");
+      box-shadow: 0 0 15px rgba(58, 141, 124, 0.3);
+    }
+
+    .hero .right {
+      background-image: url("static/imaj2.jpg");
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-blend-mode: multiply;
+      background-color: rgba(58, 141, 124, 0.6);
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(58, 141, 124, 0.5);
+    }
+
+    .hero .right h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #b7e4db;
+    }
+
+    .hero .right p {
+      font-size: 1.1em;
+      color: #d4f1ea;
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .content h2 {
+      font-size: 2em;
+      color: #3a8d7c;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      max-width: 800px;
+      margin: 10px auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #444444;
+    }
+
+    .cta {
+      margin-top: 30px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #3a8d7c;
+      color: #f5f7fa;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #2c6f63;
+    }
+
+    footer {
+      background-color: #e1e4e8;
+      color: #3a8d7c;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 0.9em;
+      margin-top: 40px;
+      border-top: 1px solid #b7e4db;
+      flex-shrink: 0;
+    }
+
+    .social-icons {
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #3a8d7c;
+      font-size: 1.5em;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #2c6f63;
+    }
+
+    .toggle-container {
+      text-align: center;
+      padding: 15px 0 30px 0;
+      background-color: #e1e4e8;
+      flex-shrink: 0;
+      border-top: 1px solid #b7e4db;
+    }
+
+    .toggle-container .toggle-mode {
+      background-color: #3a8d7c;
+      color: #f5f7fa;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 10px #3a8d7c;
+    }
+
+    .toggle-container .toggle-mode:hover {
+      background-color: #2c6f63;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 12px;">
+      <img src="static/laptop.jpg" alt="Logo ClergerTech" style="width: 45px; height: auto; border-radius: 6px;" />
+      <h1 style="margin: 0; color: #3a8d7c;">ClergerTech</h1>
+    </div>
+    <p>“Le code, c’est la poésie de la logique. À chaque ligne, je crée un monde, j’exprime une idée.”</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="projets.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div class="left"></div>
+    <div class="right">
+      <h2>Découvrez mon univers</h2>
+      <p>Des solutions web, du design graphique, et de la programmation embarquée avec Arduino.</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Biloudia Clerger</h2>
+    <p>Développeuse web passionnée de Jérémie. J'aime créer des interfaces web accessibles, programmer des systèmes éducatifs et électroniques, et contribuer à des projets à impact social.</p>
+    <p>Je maîtrise HTML, CSS, JS, Django, et j’aime mélanger design et technologie pour des résultats élégants et utiles.</p>
+    <div class="cta">
+      <a href="static/biloudia.pdf" target="_blank">Télécharger mon CV (PDF)</a>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>ClergerTech</h2>
+    <p>Fondée par <strong>Biloudia Clerger</strong>, ClergerTech est une micro-entreprise numérique dédiée à la création de solutions web simples, esthétiques et accessibles.</p>
+    <p>Nous développons des sites vitrines, des applications web, des outils éducatifs, des flyers personnalisés et des dispositifs électroniques programmés avec Arduino pour les jeunes et les entrepreneurs.</p>
+    <p>Notre mission est de rendre la technologie compréhensible, utile et valorisante pour chaque utilisateur, peu importe son niveau. Avec passion et précision, nous bâtissons le web de demain.</p>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://wa.me/50938896234" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/saveur___fraise" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:clergerbiloudia5@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+50932252158" title="Téléphone"><i class="fas fa-phone-alt"></i></a>
+    </div>
+    &copy; 2025 ClergerTech 
+  </footer>
+
+  <div class="toggle-container">
+    <button class="toggle-mode" onclick="toggleMode()" title="Changer mode clair/sombre">🌓 </button>
+  </div>
+
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      const isLight = body.style.backgroundColor === "rgb(245, 247, 250)" || getComputedStyle(body).backgroundColor === "rgb(245, 247, 250)";
+      if (isLight) {
+        // Mode sombre
+        body.style.backgroundColor = "#121212";
+        body.style.color = "#9ad1d4";
+
+        document.querySelectorAll('h1, h2, a, p').forEach(el => el.style.color = '#9ad1d4');
+        document.querySelector('header').style.backgroundColor = '#1c1c1c';
+        document.querySelector('nav').style.backgroundColor = '#1c1c1c';
+        document.querySelector('footer').style.backgroundColor = '#1c1c1c';
+        document.querySelector('.toggle-container').style.backgroundColor = '#1c1c1c';
+        document.querySelector('.toggle-container').style.borderTop = '1px solid #9ad1d4';
+
+        document.querySelector('.toggle-mode').style.backgroundColor = '#9ad1d4';
+        document.querySelector('.toggle-mode').style.color = '#121212';
+        document.querySelector('.toggle-mode').style.boxShadow = '0 0 10px #9ad1d4';
+      } else {
+        // Retour mode clair
+        body.style.backgroundColor = "#f5f7fa";
+        body.style.color = "#333333";
+
+        document.querySelectorAll('h1, h2, a, p').forEach(el => el.style.color = '');
+        document.querySelector('header').style.backgroundColor = '#e1e4e8';
+        document.querySelector('nav').style.backgroundColor = '#e1e4e8';
+        document.querySelector('footer').style.backgroundColor = '#e1e4e8';
+        document.querySelector('.toggle-container').style.backgroundColor = '#e1e4e8';
+        document.querySelector('.toggle-container').style.borderTop = '1px solid #b7e4db';
+
+        document.querySelector('.toggle-mode').style.backgroundColor = '#3a8d7c';
+        document.querySelector('.toggle-mode').style.color = '#f5f7fa';
+        document.querySelector('.toggle-mode').style.boxShadow = '0 0 10px #3a8d7c';
+      }
+    }
+  </script>
+</body>
+</html>
