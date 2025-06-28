@@ -207,9 +207,18 @@
     </div>
   </main>
 
-  <footer>
+
+     <footer>
     &copy; 2025 - ClergerTech. Tous droits réservés.
   </footer>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert("Merci pour votre message ! Je vous répondrai dès que possible.");
+      this.reset();
+    });
+  </script>
 
 </body>
 </html>
